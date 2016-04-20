@@ -1,5 +1,9 @@
 var express = require('express');
+var morgan  = require('morgan');
 var app = express();
+
+//Morgan Middleware To Show The Routes That A User Is Accessing
+app.use(morgan('dev'));
 
 app.get('/', function(req, res){
     res.json('Hi There');
