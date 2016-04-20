@@ -1,6 +1,11 @@
-var express = require('express');
-var morgan  = require('morgan');
+var express  = require('express');
+var morgan   = require('morgan');
+var mongoose = require('mongoose');
 var app = express();
+
+
+//Connecting To Mongoose Database
+mongoose.connect("mongodb://localhost/market");
 
 //Morgan Middleware To Show The Routes That A User Is Accessing
 app.use(morgan('dev'));
